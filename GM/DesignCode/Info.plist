@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Our application needs permission to write photos...</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>ConfigurationIntent</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Your data will be used to provide you better personalized ads.</string>
+	<key>GADIsAdManagerApp</key>
+	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>JustAnotherHand-Regular.ttf</string>
+		<string>NothingYouCouldDo.ttf</string>
+		<string>ShortStack.ttf</string>
+		<string>WaitingfortheSunrise.ttf</string>
+		<string>ArchivoBlack-Regular.ttf</string>
+		<string>AverageSans-Regular.ttf</string>
+		<string>BebasNeue-Regular.ttf</string>
+		<string>BunyaPERSONAL-Light.ttf</string>
+		<string>Monoton-Regular.ttf</string>
+		<string>SigmarOne-Regular.ttf</string>
+		<string>TextMeOne-Regular.ttf</string>
+		<string>UbuntuCondensed-Regular.ttf</string>
+		<string>UnicaOne-Regular.ttf</string>
+		<string>Cardo-Regular.ttf</string>
+		<string>CreteRound-Regular.ttf</string>
+		<string>CutiveMono-Regular.ttf</string>
+		<string>IBMPlexSerif-Regular.ttf</string>
+		<string>Kranky-Regular.ttf</string>
+		<string>AariannaRegular.otf</string>
+		<string>AbasalomRegular.otf</string>
+		<string>AharonRegular.otf</string>
+		<string>Bertha.otf</string>
+		<string>Caferus Normal.otf</string>
+		<string>Caferus Regular.otf</string>
+		<string>Caferus Slim.otf</string>
+		<string>Good Bye November.otf</string>
+		<string>HanmaRegular.otf</string>
+		<string>Heather.otf</string>
+		<string>Helena.otf</string>
+		<string>KarlaScript.otf</string>
+		<string>Leviafan-Helper.otf</string>
+		<string>Leviafan-Normal.otf</string>
+		<string>Rill Script.otf</string>
+		<string>Ackley-Regular.otf</string>
+		<string>Adenn-Bold.otf</string>
+		<string>Adenn-Regular.otf</string>
+		<string>Adriell-Bold.otf</string>
+		<string>Adriell-Regular.otf</string>
+		<string>AlongSanss2-Medium.otf</string>
+		<string>AlongSanss2-Regular.otf</string>
+		<string>AlongSanss2-SemiBold.otf</string>
+		<string>Canera-Bold.otf</string>
+		<string>Canera-Semibold.otf</string>
+		<string>Canera.otf</string>
+		<string>CaustenRound-Bold.otf</string>
+		<string>CaustenRound-Light.otf</string>
+		<string>CaustenRound-Medium.otf</string>
+		<string>CaustenRound-Regular.otf</string>
+		<string>Franie-Hair.otf</string>
+		<string>Franie-Regular.otf</string>
+		<string>Franie-SemiBold.otf</string>
+		<string>GimletSansDisplay-Regular.otf</string>
+		<string>GimletSansDisplay-SemiBold.otf</string>
+		<string>GimletSansDisplay-SemiBoldItalic.otf</string>
+		<string>GreycliffCF-Bold.otf</string>
+		<string>GreycliffCF-Regular.otf</string>
+		<string>Kaelia-Bold.otf</string>
+		<string>Kaelia-Semibold.otf</string>
+		<string>Kaelia.otf</string>
+		<string>Larosa-Black.otf</string>
+		<string>Larosa-Light.otf</string>
+		<string>Madson-Semibold.otf</string>
+		<string>morning violetta.otf</string>
+		<string>NeuethingSans-Bold.otf</string>
+		<string>NeuethingSans-ExtraBold.otf</string>
+		<string>NeuethingSans-Meduim.otf</string>
+		<string>Polaris-Bold.otf</string>
+		<string>Polaris-Semibold.otf</string>
+		<string>PollyRounded-Bold.otf</string>
+		<string>PollyRounded-Light.otf</string>
+		<string>PollyRounded-Regular.otf</string>
+		<string>The Foregen Regular.otf</string>
+		<string>The Foregen Vintage.otf</string>
+		<string>TurismoCF-Bold.otf</string>
+		<string>TurismoCF-Light.otf</string>
+		<string>TurismoCF-Medium.otf</string>
+		<string>TurismoCF-Regular.otf</string>
+		<string>Berlleigh.otf</string>
+		<string>Claster Oleander.otf</string>
+		<string>Glorine.otf</string>
+		<string>Gunma-Bold.otf</string>
+		<string>Gunma-Light.otf</string>
+		<string>Gunma-Regular.otf</string>
+		<string>Jerome.otf</string>
+		<string>linstone.otf</string>
+		<string>Minthe-Regular.otf</string>
+		<string>Nathanos.otf</string>
+		<string>Prostteo OTF.otf</string>
+		<string>QuincyCF-Bold.otf</string>
+		<string>QuincyCF-Medium.otf</string>
+		<string>QuincyCF-RegularItalic.otf</string>
+		<string>ThomasCraft-Bold.otf</string>
+		<string>ThomasCraft-Regular.otf</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UILaunchStoryboardName</key>
+					<string>LaunchScreen</string>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Dark</string>
+</dict>
+</plist>
