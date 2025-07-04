@@ -10,20 +10,7 @@ import SwiftUI
 
 struct TabBar: View {
    var body: some View {
-      TabView {
-         Home().tabItem {
-            Image("IconHome")
-            Text("Home")
-         }
-         .tag(1)
-         ContentView().tabItem {
-            Image("IconCards")
-            Text("Certificates")
-         }
-         .tag(2)
-       
-      }
-      .edgesIgnoringSafeArea(.top)
+       Home()
    }
 }
 

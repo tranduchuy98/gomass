@@ -8,11 +8,13 @@
 
 import Foundation
 
+let DOMAIN = "https://api.alochat.site"
+
 typealias RequestCallback = (Data?, URLResponse?, Error?) -> Void
 
-public class CategoriesService {
+public class DataService {
 
-    static func getQuotesInCategories(path: String,completion: @escaping  RequestCallback) {
+    static func getInitData(path: String,completion: @escaping  RequestCallback) {
         let urlRequestBuilder:URLRequestBuilder = URLRequestBuilder.init(with: path, path: "")
         urlRequestBuilder.set(method: .get)
         let urlRequest = try! urlRequestBuilder.build()

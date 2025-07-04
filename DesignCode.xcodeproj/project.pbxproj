@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E43E2F02E17D76A00C12AFE /* InnitDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43E2EF2E17D76A00C12AFE /* InnitDataModel.swift */; };
+		3E43E2F22E17D82F00C12AFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43E2F12E17D82F00C12AFE /* DataManager.swift */; };
 		840E4B212A9100C600048945 /* extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E4B202A9100C600048945 /* extention.swift */; };
 		840E4B2A2A91386A00048945 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 840E4B292A91386A00048945 /* Kingfisher */; };
 		84AB9A772AADA4BF006A5C5A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB9A762AADA4BF006A5C5A /* OnboardingView.swift */; };
-		84BE91E12A93A5750024818F /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91E02A93A5750024818F /* NetWork.swift */; };
 		84BE91FB2A93B52D0024818F /* extension+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91E62A93B52D0024818F /* extension+.swift */; };
 		84BE91FC2A93B52D0024818F /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91E72A93B52D0024818F /* Type.swift */; };
 		84BE91FD2A93B52D0024818F /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91E82A93B52D0024818F /* Json.swift */; };
@@ -29,7 +30,6 @@
 		84BE920A2A93B52D0024818F /* MutableCollectionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91F72A93B52D0024818F /* MutableCollectionExt.swift */; };
 		84BE920B2A93B52D0024818F /* ArrayExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91F82A93B52D0024818F /* ArrayExt.swift */; };
 		84BE920C2A93B52D0024818F /* EncodableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91F92A93B52D0024818F /* EncodableExt.swift */; };
-		84BE920D2A93B52D0024818F /* PathURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91FA2A93B52D0024818F /* PathURL.swift */; };
 		AB62172722D870540039BC73 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62172622D870540039BC73 /* Home.swift */; };
 		ABB215DC22DB353800424B38 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB215DB22DB353800424B38 /* BlurView.swift */; };
 		ABB215E422DC7D0000424B38 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB215E322DC7D0000424B38 /* TabBar.swift */; };
@@ -55,12 +55,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E43E2EF2E17D76A00C12AFE /* InnitDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnitDataModel.swift; sourceTree = "<group>"; };
+		3E43E2F12E17D82F00C12AFE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		840CA0B92AA79097006392AC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		840E4B202A9100C600048945 /* extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extention.swift; sourceTree = "<group>"; };
 		8424198B2AA8D7BE008C76CB /* DesignCodeRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCodeRelease.entitlements; sourceTree = "<group>"; };
 		8424198E2AA8D801008C76CB /* DesignCodeDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCodeDebug.entitlements; sourceTree = "<group>"; };
 		84AB9A762AADA4BF006A5C5A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		84BE91E02A93A5750024818F /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		84BE91E62A93B52D0024818F /* extension+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "extension+.swift"; sourceTree = "<group>"; };
 		84BE91E72A93B52D0024818F /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		84BE91E82A93B52D0024818F /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		84BE91F72A93B52D0024818F /* MutableCollectionExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableCollectionExt.swift; sourceTree = "<group>"; };
 		84BE91F82A93B52D0024818F /* ArrayExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExt.swift; sourceTree = "<group>"; };
 		84BE91F92A93B52D0024818F /* EncodableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExt.swift; sourceTree = "<group>"; };
-		84BE91FA2A93B52D0024818F /* PathURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathURL.swift; sourceTree = "<group>"; };
 		AB62172622D870540039BC73 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		ABB215DB22DB353800424B38 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		ABB215E322DC7D0000424B38 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -105,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E43E2EE2E17D74C00C12AFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E43E2EF2E17D76A00C12AFE /* InnitDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		840CA0B62AA79097006392AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +132,9 @@
 		84BE91DF2A93A56A0024818F /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				3E43E2EE2E17D74C00C12AFE /* Model */,
 				84BE91E42A93B52D0024818F /* Networking */,
-				84BE91E02A93A5750024818F /* NetWork.swift */,
+				3E43E2F12E17D82F00C12AFE /* DataManager.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -137,7 +146,6 @@
 				84BE91EC2A93B52D0024818F /* Service.swift */,
 				84BE91ED2A93B52D0024818F /* network */,
 				84BE91F12A93B52D0024818F /* Important */,
-				84BE91FA2A93B52D0024818F /* PathURL.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -308,7 +316,6 @@
 				ABE07CBF22D74F5700D209BE /* AppDelegate.swift in Sources */,
 				84AB9A772AADA4BF006A5C5A /* OnboardingView.swift in Sources */,
 				84BE92022A93B52D0024818F /* APIClient.swift in Sources */,
-				84BE920D2A93B52D0024818F /* PathURL.swift in Sources */,
 				84BE91FB2A93B52D0024818F /* extension+.swift in Sources */,
 				84BE920A2A93B52D0024818F /* MutableCollectionExt.swift in Sources */,
 				84BE92072A93B52D0024818F /* DictionaryExt.swift in Sources */,
@@ -318,12 +325,13 @@
 				84BE92052A93B52D0024818F /* DataExt.swift in Sources */,
 				840E4B212A9100C600048945 /* extention.swift in Sources */,
 				84BE92082A93B52D0024818F /* SetExt.swift in Sources */,
+				3E43E2F02E17D76A00C12AFE /* InnitDataModel.swift in Sources */,
 				84BE91FD2A93B52D0024818F /* Json.swift in Sources */,
 				84BE92092A93B52D0024818F /* DecodableExt.swift in Sources */,
 				AB62172722D870540039BC73 /* Home.swift in Sources */,
 				84BE920C2A93B52D0024818F /* EncodableExt.swift in Sources */,
+				3E43E2F22E17D82F00C12AFE /* DataManager.swift in Sources */,
 				84BE91FC2A93B52D0024818F /* Type.swift in Sources */,
-				84BE91E12A93A5750024818F /* NetWork.swift in Sources */,
 				84BE91FF2A93B52D0024818F /* JsonLiteral+.swift in Sources */,
 				ABE07CC322D74F5700D209BE /* ContentView.swift in Sources */,
 				84BE92012A93B52D0024818F /* Service.swift in Sources */,
@@ -478,7 +486,7 @@
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data will be used to provide you better personalized ads.";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,7 +517,7 @@
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data will be used to provide you better personalized ads.";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
