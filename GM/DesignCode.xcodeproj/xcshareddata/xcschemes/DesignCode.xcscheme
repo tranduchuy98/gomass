@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ABE07CBA22D74F5700D209BE"
-               BuildableName = "Daily Quotes.app"
+               BuildableName = "GoMass.app"
                BlueprintName = "DesignCode"
                ReferencedContainer = "container:DesignCode.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABE07CBA22D74F5700D209BE"
-            BuildableName = "Daily Quotes.app"
+            BuildableName = "GoMass.app"
             BlueprintName = "DesignCode"
             ReferencedContainer = "container:DesignCode.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABE07CBA22D74F5700D209BE"
-            BuildableName = "Daily Quotes.app"
+            BuildableName = "GoMass.app"
             BlueprintName = "DesignCode"
             ReferencedContainer = "container:DesignCode.xcodeproj">
          </BuildableReference>
