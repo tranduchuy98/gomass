@@ -8,7 +8,8 @@
 
 import Foundation
 
-let DOMAIN = "https://api.alochat.site"
+let DOMAIN = "https://api.gomass.vn"
+let DOMAIN_URL = "https://gomass.vn/"
 
 typealias RequestCallback = (Data?, URLResponse?, Error?) -> Void
 

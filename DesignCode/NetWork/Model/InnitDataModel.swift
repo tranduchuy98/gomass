@@ -13,4 +13,6 @@ public struct InnitDataModel: Codable, Hashable {
     public let vi: [String]?
     public let en: [String]?
     public let ph: [String]?
+    public let ko: [String]?
+    public let tw: [String]?
 }

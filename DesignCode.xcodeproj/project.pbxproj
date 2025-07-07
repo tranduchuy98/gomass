@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		3E43E2F02E17D76A00C12AFE /* InnitDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43E2EF2E17D76A00C12AFE /* InnitDataModel.swift */; };
 		3E43E2F22E17D82F00C12AFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43E2F12E17D82F00C12AFE /* DataManager.swift */; };
-		840E4B212A9100C600048945 /* extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E4B202A9100C600048945 /* extention.swift */; };
+		3EC4F9E02E1B7BA200BCE063 /* CommonWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4F9DF2E1B7BA200BCE063 /* CommonWebView.swift */; };
+		3EC4F9E22E1B7C0F00BCE063 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4F9E12E1B7C0F00BCE063 /* WebView.swift */; };
+		840E4B212A9100C600048945 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E4B202A9100C600048945 /* Extention.swift */; };
 		840E4B2A2A91386A00048945 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 840E4B292A91386A00048945 /* Kingfisher */; };
 		84AB9A772AADA4BF006A5C5A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB9A762AADA4BF006A5C5A /* OnboardingView.swift */; };
 		84BE91FB2A93B52D0024818F /* extension+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE91E62A93B52D0024818F /* extension+.swift */; };
@@ -57,8 +59,10 @@
 /* Begin PBXFileReference section */
 		3E43E2EF2E17D76A00C12AFE /* InnitDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnitDataModel.swift; sourceTree = "<group>"; };
 		3E43E2F12E17D82F00C12AFE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3EC4F9DF2E1B7BA200BCE063 /* CommonWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWebView.swift; sourceTree = "<group>"; };
+		3EC4F9E12E1B7C0F00BCE063 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		840CA0B92AA79097006392AC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		840E4B202A9100C600048945 /* extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extention.swift; sourceTree = "<group>"; };
+		840E4B202A9100C600048945 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		8424198B2AA8D7BE008C76CB /* DesignCodeRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCodeRelease.entitlements; sourceTree = "<group>"; };
 		8424198E2AA8D801008C76CB /* DesignCodeDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCodeDebug.entitlements; sourceTree = "<group>"; };
 		84AB9A762AADA4BF006A5C5A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -124,7 +128,9 @@
 		840E4B1D2A90F43800048945 /* Ultiliti */ = {
 			isa = PBXGroup;
 			children = (
-				840E4B202A9100C600048945 /* extention.swift */,
+				840E4B202A9100C600048945 /* Extention.swift */,
+				3EC4F9DF2E1B7BA200BCE063 /* CommonWebView.swift */,
+				3EC4F9E12E1B7C0F00BCE063 /* WebView.swift */,
 			);
 			path = Ultiliti;
 			sourceTree = "<group>";
@@ -318,12 +324,13 @@
 				84BE92022A93B52D0024818F /* APIClient.swift in Sources */,
 				84BE91FB2A93B52D0024818F /* extension+.swift in Sources */,
 				84BE920A2A93B52D0024818F /* MutableCollectionExt.swift in Sources */,
+				3EC4F9E02E1B7BA200BCE063 /* CommonWebView.swift in Sources */,
 				84BE92072A93B52D0024818F /* DictionaryExt.swift in Sources */,
 				84BE92032A93B52D0024818F /* BaseNetworking.swift in Sources */,
 				ABE07CC122D74F5700D209BE /* SceneDelegate.swift in Sources */,
 				84BE920B2A93B52D0024818F /* ArrayExt.swift in Sources */,
 				84BE92052A93B52D0024818F /* DataExt.swift in Sources */,
-				840E4B212A9100C600048945 /* extention.swift in Sources */,
+				840E4B212A9100C600048945 /* Extention.swift in Sources */,
 				84BE92082A93B52D0024818F /* SetExt.swift in Sources */,
 				3E43E2F02E17D76A00C12AFE /* InnitDataModel.swift in Sources */,
 				84BE91FD2A93B52D0024818F /* Json.swift in Sources */,
@@ -333,6 +340,7 @@
 				3E43E2F22E17D82F00C12AFE /* DataManager.swift in Sources */,
 				84BE91FC2A93B52D0024818F /* Type.swift in Sources */,
 				84BE91FF2A93B52D0024818F /* JsonLiteral+.swift in Sources */,
+				3EC4F9E22E1B7C0F00BCE063 /* WebView.swift in Sources */,
 				ABE07CC322D74F5700D209BE /* ContentView.swift in Sources */,
 				84BE92012A93B52D0024818F /* Service.swift in Sources */,
 				ABB215DC22DB353800424B38 /* BlurView.swift in Sources */,
@@ -481,7 +489,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "DesignCode/Preview\\ Content";
-				DEVELOPMENT_TEAM = BX2YY68T22;
+				DEVELOPMENT_TEAM = TS5LABMG92;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -512,7 +520,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "DesignCode/Preview\\ Content";
-				DEVELOPMENT_TEAM = BX2YY68T22;
+				DEVELOPMENT_TEAM = TS5LABMG92;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";

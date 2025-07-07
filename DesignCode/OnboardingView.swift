@@ -34,7 +34,6 @@ struct OnboardingView: View {
                 .background(Color.white)
             }
         }
-        .navigationViewStyle(.stack)
         .onAppear {
             DataService.getInitData(path: DOMAIN + "/api/v1/configHome") {  (data, response, error) in
                 if let data = data {
@@ -47,7 +46,7 @@ struct OnboardingView: View {
                 }
             }
         }
-//        .background(Color.init(hex: "39564d"))
+        .navigationViewStyle(.stack)
     }
 }
 

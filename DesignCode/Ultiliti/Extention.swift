@@ -11,6 +11,18 @@ import SwiftUI
 
 
 
+extension ProgressView {
+    
+    func defaultProgessView() -> some View {
+        self.progressViewStyle(CircularProgressViewStyle(tint: .white))
+            .scaleEffect(2)
+            .frame(maxWidth: UIScreen.screenWidth, maxHeight: UIScreen.screenHeight)
+            .background(Color.black.opacity(0.3))
+            .ignoresSafeArea()
+    }
+}
+
+
 // MARK: - To be able to use HEX as Color
 extension Color {
     
@@ -434,5 +446,19 @@ extension String {
     
     func localized(with argument: CVarArg = [], comment: String = "") -> String {
         return String(format: self.localized(comment: comment), argument)
+    }
+}
+
+extension UIScreen {
+    static let screenWidth = UIScreen.main.bounds.width
+    static let screenHeight = UIScreen.main.bounds.height
+    static let screenSize = UIScreen.main.bounds.size
+    
+    static func fracion(height value: CGFloat) -> CGFloat {
+        return UIScreen.main.bounds.height * value
+    }
+    
+    static func fracion(width value: CGFloat) -> CGFloat {
+        return UIScreen.main.bounds.width * value
     }
 }
