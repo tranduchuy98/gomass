@@ -62,6 +62,7 @@ struct Home: View {
                         Button {
                             self.url = keyManager.language.bookingUrl
                             self.titleWeb =  keyManager.language.bookingTitle
+                            WebViewModel.share.isLoad = false
                             selection = "CommonWebView"
                         } label: {
                             VStack() {
@@ -88,6 +89,7 @@ struct Home: View {
                             Button {
                                 self.url = keyManager.language.bookingUrl
                                 self.titleWeb =  keyManager.language.bookingTitle
+                                WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             } label: {
                                 VStack() {
@@ -104,6 +106,7 @@ struct Home: View {
                             AnimatedButton(titleButton: keyManager.language.bookNow, onClick: {
                                 self.url = keyManager.language.bookingUrl
                                 self.titleWeb =  keyManager.language.bookingTitle
+                                WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             })
                         }
@@ -121,6 +124,7 @@ struct Home: View {
                             Button {
                                 self.url = keyManager.language.techniciansUrl
                                 self.titleWeb =  keyManager.language.bookingTitle
+                                WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             } label: {
                                 VStack() {
@@ -138,6 +142,7 @@ struct Home: View {
                             AnimatedButton(titleButton: keyManager.language.bookNow, onClick: {
                                 self.url = keyManager.language.techniciansUrl
                                 self.titleWeb =  keyManager.language.bookingTitle
+                                WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             })
                         }
@@ -156,6 +161,7 @@ struct Home: View {
                             Button {
                                 self.url = keyManager.language.apllyUrl
                                 self.titleWeb =  keyManager.language.registerTitle
+                                WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             } label: {
                                 VStack() {
@@ -172,6 +178,7 @@ struct Home: View {
                             AnimatedButton(titleButton: keyManager.language.registerNow, onClick: {
                                 self.url = keyManager.language.apllyUrl
                                 self.titleWeb =  keyManager.language.registerTitle
+                                WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             })
                         }

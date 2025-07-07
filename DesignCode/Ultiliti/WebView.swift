@@ -4,6 +4,12 @@ import Foundation
 import SwiftUI
 import WebKit
 
+class WebViewModel: ObservableObject {
+    @Published var webview: WKWebView?
+    static let share = WebViewModel()
+    var isLoad = false
+}
+
 struct WebView : UIViewRepresentable {
     
     let request: URLRequest
@@ -63,8 +69,10 @@ struct WebView : UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
+        if WebViewModel.share.isLoad == true {return}
         uiView.uiDelegate = context.coordinator
         uiView.load(request)
+        WebViewModel.share.isLoad = true
     }
     
     func goBack(){

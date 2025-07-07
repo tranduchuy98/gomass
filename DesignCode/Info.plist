@@ -173,5 +173,12 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Dark</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Please allow access to upload image</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Please allow access to save photo in your photo library</string>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>Import photo to upload image</string>
 </dict>
 </plist>
+
