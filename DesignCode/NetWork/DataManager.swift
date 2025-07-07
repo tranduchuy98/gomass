@@ -20,8 +20,8 @@ enum LanguageSelect: String, CaseIterable {
     case vn = "Tiếng Việt"
     case en = "English"
     case ph = "Philippines"
-    case kr = "Korean"
-    case tw = "Taiwanese"
+    case kr = "한국어"
+    case tw = "臺灣華語"
     
     var imageName: String {
         switch self {

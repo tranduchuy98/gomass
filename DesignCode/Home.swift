@@ -48,6 +48,8 @@ struct Home: View {
                                 .frame(width: 30, height: 30)
                             Text(keyManager.language.rawValue)
                                 .font(.subheadline)
+                            Image(systemName: "chevron.down")
+                                .foregroundColor(Color.white)
                         }
                     }
                     .foregroundColor(.white)
