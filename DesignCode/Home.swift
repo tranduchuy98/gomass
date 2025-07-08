@@ -18,7 +18,7 @@ struct Home: View {
     var body: some View {
         ZStack {
             NavigationLink(destination: CommonWebView(title: titleWeb, stringURL: url), tag: "CommonWebView", selection: $selection) {EmptyView()}.hidden()
-            VStack {
+            VStack (spacing: 0) {
                 HStack {
                     // Logo
                     Image("iconApp-Img")
@@ -55,8 +55,8 @@ struct Home: View {
                     .foregroundColor(.white)
                 }
                 .padding(.horizontal)
-                .padding(.vertical, 10)
                 .background(Color("Primary"))
+                
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 0) {
                         Button {
@@ -70,11 +70,6 @@ struct Home: View {
                                     KFImage.url(url)
                                         .resizable()
                                         .scaledToFill()
-                                        .background(Color.white)
-                                        .cornerRadius(15)
-                                        .shadow(color: .gray.opacity(0.3), radius: 8, x: 0, y: 5)
-                                        .padding(.horizontal)
-                                        .padding(.top, 10)
                                 }
                             }
                         }
@@ -86,6 +81,8 @@ struct Home: View {
                                     .multilineTextAlignment(.leading)
                                 Spacer()
                             }
+                            .padding(.horizontal)
+                            .padding(.top, 10)
                             Button {
                                 self.url = keyManager.language.bookingUrl
                                 self.titleWeb =  keyManager.language.bookingTitle
@@ -98,8 +95,6 @@ struct Home: View {
                                             .resizable()
                                             .scaledToFill()
                                             .background(Color.white)
-                                            .cornerRadius(15)
-                                            .shadow(color: .gray.opacity(0.3), radius: 8, x: 0, y: 5)
                                     }
                                 }
                             }
@@ -109,9 +104,8 @@ struct Home: View {
                                 WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             })
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
-                        .padding(.top, 10)
                         
                         VStack(spacing: 10) {
                             HStack {
@@ -121,6 +115,8 @@ struct Home: View {
                                     .multilineTextAlignment(.leading)
                                 Spacer()
                             }
+                            .padding(.horizontal)
+                            .padding(.top, 10)
                             Button {
                                 self.url = keyManager.language.techniciansUrl
                                 self.titleWeb =  keyManager.language.bookingTitle
@@ -133,8 +129,6 @@ struct Home: View {
                                             .resizable()
                                             .scaledToFill()
                                             .background(Color.white)
-                                            .cornerRadius(15)
-                                            .shadow(color: .gray.opacity(0.3), radius: 8, x: 0, y: 5)
                                     }
                                 }
                             }
@@ -145,9 +139,9 @@ struct Home: View {
                                 WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             })
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
-                        .padding(.top, 10)
+                
                         
                         
                         VStack(spacing: 10) {
@@ -158,6 +152,8 @@ struct Home: View {
                                     .multilineTextAlignment(.leading)
                                 Spacer()
                             }
+                            .padding(.horizontal)
+                            .padding(.top, 10)
                             Button {
                                 self.url = keyManager.language.apllyUrl
                                 self.titleWeb =  keyManager.language.registerTitle
@@ -170,8 +166,7 @@ struct Home: View {
                                             .resizable()
                                             .scaledToFill()
                                             .background(Color.white)
-                                            .cornerRadius(15)
-                                            .shadow(color: .gray.opacity(0.3), radius: 8, x: 0, y: 5)
+                                 
                                     }
                                 }
                             }
@@ -181,9 +176,9 @@ struct Home: View {
                                 WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             })
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
-                        .padding(.top, 10)
+                  
                         Spacer()
                     }
                 }
