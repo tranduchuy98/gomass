@@ -15,47 +15,51 @@ struct Home: View {
     @State private var selection: String? = nil
     @State private var url: String? = nil
     @State private var titleWeb: String? = nil
+    @State private var isLoadData = true
     var body: some View {
         ZStack {
             NavigationLink(destination: CommonWebView(title: titleWeb, stringURL: url), tag: "CommonWebView", selection: $selection) {EmptyView()}.hidden()
             VStack (spacing: 0) {
-                HStack {
-                    // Logo
-                    Image("iconApp-Img")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
-                    Spacer()
-                    
-                    Menu {
-                        ForEach(LanguageSelect.allCases, id: \.self) { item in
-                            Button {
-                                withAnimation {
-                                    keyManager.language = item
+                if !self.isLoadData {
+                    HStack {
+                        // Logo
+                        Image("iconApp-Img")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle())
+                        Spacer()
+                        
+                        Menu {
+                            ForEach(LanguageSelect.allCases, id: \.self) { item in
+                                Button {
+                                    withAnimation {
+                                        keyManager.language = item
+                                    }
+                                } label: {
+                                    Label(
+                                        title: {Image(item.imageName)}, icon: {Text(item.rawValue)}
+                                    )
                                 }
-                            } label: {
-                                Label(
-                                    title: {Image(item.imageName)}, icon: {Text(item.rawValue)}
-                                )
+                            }
+                            
+                        } label: {
+                            HStack(spacing: 15) {
+                                Image(keyManager.language.imageName)
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                Text(keyManager.language.rawValue)
+                                    .font(.subheadline)
+                                Image(systemName: "chevron.down")
+                                    .foregroundColor(Color.white)
                             }
                         }
-                        
-                    } label: {
-                        HStack(spacing: 15) {
-                            Image(keyManager.language.imageName)
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text(keyManager.language.rawValue)
-                                .font(.subheadline)
-                            Image(systemName: "chevron.down")
-                                .foregroundColor(Color.white)
-                        }
+                        .foregroundColor(.white)
                     }
-                    .foregroundColor(.white)
+                    .frame(height: 64)
+                    .padding(.horizontal)
+                    .background(Color("Primary"))
                 }
-                .padding(.horizontal)
-                .background(Color("Primary"))
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 0) {
@@ -66,11 +70,13 @@ struct Home: View {
                             selection = "CommonWebView"
                         } label: {
                             VStack() {
-                                if let url = URL(string: keyManager.language.homeImage.first ?? ""){
-                                    KFImage.url(url)
+                                    KFImage.url(URL(string: keyManager.language.homeImage.first ?? ""))
                                         .resizable()
+                                        .placeholder {
+                                            Image("placeholder")
+                                                .resizable()
+                                        }
                                         .scaledToFill()
-                                }
                             }
                         }
                         VStack(spacing: 10) {
@@ -90,12 +96,14 @@ struct Home: View {
                                 selection = "CommonWebView"
                             } label: {
                                 VStack() {
-                                    if let url = URL(string: keyManager.language.homeImage[1]){
-                                        KFImage.url(url)
+                                        KFImage.url(URL(string: keyManager.language.homeImage[1]))
                                             .resizable()
+                                            .placeholder {
+                                                Image("placeholder")
+                                                    .resizable()
+                                            }
                                             .scaledToFill()
                                             .background(Color.white)
-                                    }
                                 }
                             }
                             AnimatedButton(titleButton: keyManager.language.bookNow, onClick: {
@@ -124,12 +132,14 @@ struct Home: View {
                                 selection = "CommonWebView"
                             } label: {
                                 VStack() {
-                                    if let url = URL(string: keyManager.language.homeImage[2]){
-                                        KFImage.url(url)
+                                        KFImage.url(URL(string: keyManager.language.homeImage[2]))
                                             .resizable()
+                                            .placeholder {
+                                                Image("placeholder")
+                                                    .resizable()
+                                            }
                                             .scaledToFill()
                                             .background(Color.white)
-                                    }
                                 }
                             }
                         
@@ -161,13 +171,14 @@ struct Home: View {
                                 selection = "CommonWebView"
                             } label: {
                                 VStack() {
-                                    if let url = URL(string: keyManager.language.homeImage[3]){
-                                        KFImage.url(url)
+                                        KFImage.url(URL(string: keyManager.language.homeImage[3]))
                                             .resizable()
+                                            .placeholder {
+                                                Image("placeholder")
+                                                    .resizable()
+                                            }
                                             .scaledToFill()
                                             .background(Color.white)
-                                 
-                                    }
                                 }
                             }
                             AnimatedButton(titleButton: keyManager.language.registerNow, onClick: {
@@ -186,6 +197,13 @@ struct Home: View {
             .background(Color.white)
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                withAnimation {
+                    self.isLoadData = false
+                }
+            }
         }
     }
 }

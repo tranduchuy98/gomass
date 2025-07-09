@@ -174,15 +174,15 @@ enum LanguageSelect: String, CaseIterable {
     var homeImage: [String] {
         switch self {
         case .vn:
-            return KeyManager.shared.dataInit?.vi ?? ["","","",""]
+            return (KeyManager.shared.dataInit?.vi ?? []).isEmpty ? ["","","",""] : KeyManager.shared.dataInit?.vi ?? []
         case .en:
-            return KeyManager.shared.dataInit?.en ?? ["","","",""]
+            return (KeyManager.shared.dataInit?.en ?? []).isEmpty ? ["","","",""] : KeyManager.shared.dataInit?.en ?? []
         case .ph:
-            return KeyManager.shared.dataInit?.ph ?? ["","","",""]
+            return (KeyManager.shared.dataInit?.ph ?? []).isEmpty ? ["","","",""] : KeyManager.shared.dataInit?.ph ?? []
         case .kr:
-            return KeyManager.shared.dataInit?.ko ?? ["","","",""]
+            return (KeyManager.shared.dataInit?.ko ?? []).isEmpty ? ["","","",""] : KeyManager.shared.dataInit?.ko ?? []
         case .tw:
-            return KeyManager.shared.dataInit?.tw ?? ["","","",""]
+            return (KeyManager.shared.dataInit?.tw ?? []).isEmpty ? ["","","",""] : KeyManager.shared.dataInit?.tw ?? []
         }
     }
 }
