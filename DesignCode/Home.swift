@@ -106,7 +106,7 @@ struct Home: View {
                                             .background(Color.white)
                                 }
                             }
-                            AnimatedButton(titleButton: keyManager.language.bookNow, onClick: {
+                            AnimatedButton(titleButton: keyManager.language.bookingTitle, onClick: {
                                 self.url = keyManager.language.bookingUrl
                                 self.titleWeb =  keyManager.language.bookingTitle
                                 WebViewModel.share.isLoad = false
@@ -127,7 +127,7 @@ struct Home: View {
                             .padding(.top, 10)
                             Button {
                                 self.url = keyManager.language.techniciansUrl
-                                self.titleWeb =  keyManager.language.bookingTitle
+                                self.titleWeb =  keyManager.language.selectBookingTitle
                                 WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             } label: {
@@ -143,9 +143,9 @@ struct Home: View {
                                 }
                             }
                         
-                            AnimatedButton(titleButton: keyManager.language.bookNow, onClick: {
+                            AnimatedButton(titleButton: keyManager.language.selectBookingTitle, onClick: {
                                 self.url = keyManager.language.techniciansUrl
-                                self.titleWeb =  keyManager.language.bookingTitle
+                                self.titleWeb =  keyManager.language.selectBookingTitle
                                 WebViewModel.share.isLoad = false
                                 selection = "CommonWebView"
                             })
@@ -181,7 +181,7 @@ struct Home: View {
                                             .background(Color.white)
                                 }
                             }
-                            AnimatedButton(titleButton: keyManager.language.registerNow, onClick: {
+                            AnimatedButton(titleButton: keyManager.language.registerTitle, onClick: {
                                 self.url = keyManager.language.apllyUrl
                                 self.titleWeb =  keyManager.language.registerTitle
                                 WebViewModel.share.isLoad = false

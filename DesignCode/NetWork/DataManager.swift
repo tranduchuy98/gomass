@@ -60,30 +60,45 @@ enum LanguageSelect: String, CaseIterable {
     var bookingTitle: String {
         switch self {
         case .vn:
-            return "Đặt lịch"
+            return "Đặt ngay"
         case .en:
-            return "Booking"
+            return "Book Now"
         case .ph:
-            return "Pagbu-book"
+            return "Mag-book Ngayon" // Filipino (Philippines)
         case .kr:
-            return "예약"
+            return "지금 예약하기" // Korean
         case .tw:
-            return "預訂"
+            return "立即預訂" // Traditional Chinese (Taiwan)
+        }
+    }
+    
+    var selectBookingTitle: String {
+        switch self {
+        case .vn:
+            return "Chọn chuyên viên ngay"
+        case .en:
+            return "Choose Specialist Now"
+        case .ph:
+            return "Pumili ng Espesyalista Ngayon" // Filipino (Philippines)
+        case .kr:
+            return "지금 전문가를 선택하세요" // Korean
+        case .tw:
+            return "立即選擇專家" // Traditional Chinese (Taiwan)
         }
     }
     
     var registerTitle: String {
         switch self {
         case .vn:
-            return "Đăng ký"
+            return "Ứng tuyển ngay"
         case .en:
-            return "Register"
+            return "Apply Now"
         case .ph:
-            return "Magparehistro"
+            return "Mag-apply Ngayon" // Filipino (Philippines)
         case .kr:
-            return "등록"
+            return "지금 지원하세요" // Korean
         case .tw:
-            return "註冊"
+            return "立即申請" // Traditional Chinese (Taiwan)
         }
     }
     
