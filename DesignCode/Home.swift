@@ -189,6 +189,13 @@ struct Home: View {
                             })
                             .padding(.horizontal)
                         }
+                        
+                        GridButtonsView(language: keyManager.language, onclick: {
+                            self.url = $0.url(keyManager.language.langualeCode)
+                            self.titleWeb =  $0.title(keyManager.language)
+                            WebViewModel.share.isLoad = false
+                            selection = "CommonWebView"
+                        })
                   
                         Spacer()
                     }
@@ -236,5 +243,42 @@ struct AnimatedButton: View {
                 isZoomed.toggle()
             }
         }
+    }
+}
+
+struct GridButtonsView: View {
+ 
+    let language: LanguageSelect
+    let onclick: (GridButtonItem) -> Void
+    
+   private let gridItems: [GridItem] = [
+        GridItem(.flexible(), spacing: 15),
+        GridItem(.flexible(), spacing: 15)
+    ]
+
+    var body: some View {
+       
+        ScrollView {
+            LazyVGrid(columns: gridItems, spacing: 15) {
+                ForEach(GridButtonItem.allCases, id: \.self) { item in
+                    Button(action: {
+                        onclick(item)
+                    }) {
+                        Text(item.title(language))
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 20)
+                            .background(Color(red: 0.15, green: 0.45, blue: 0.25))
+                            .cornerRadius(10)
+                            .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 3)
+                    }
+                }
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 20)
+        }
+        .background(Color.white)
+        .edgesIgnoringSafeArea(.all)
     }
 }
