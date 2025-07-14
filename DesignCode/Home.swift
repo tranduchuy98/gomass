@@ -269,7 +269,7 @@ struct GridButtonsView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 20)
-                            .background(Color(red: 0.15, green: 0.45, blue: 0.25))
+                            .background(Color("Primary"))
                             .cornerRadius(10)
                             .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 3)
                     }
