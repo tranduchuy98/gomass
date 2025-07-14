@@ -37,7 +37,6 @@
 		ABB215E422DC7D0000424B38 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB215E322DC7D0000424B38 /* TabBar.swift */; };
 		ABE07CBF22D74F5700D209BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CBE22D74F5700D209BE /* AppDelegate.swift */; };
 		ABE07CC122D74F5700D209BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CC022D74F5700D209BE /* SceneDelegate.swift */; };
-		ABE07CC322D74F5700D209BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CC222D74F5700D209BE /* ContentView.swift */; };
 		ABE07CC522D74F5900D209BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE07CC422D74F5900D209BE /* Assets.xcassets */; };
 		ABE07CC822D74F5900D209BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE07CC722D74F5900D209BE /* Preview Assets.xcassets */; };
 		ABE07CCB22D74F5900D209BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE07CC922D74F5900D209BE /* LaunchScreen.storyboard */; };
@@ -90,7 +89,6 @@
 		ABE07CBB22D74F5700D209BE /* GoMass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07CBE22D74F5700D209BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE07CC022D74F5700D209BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABE07CC222D74F5700D209BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ABE07CC422D74F5900D209BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE07CC722D74F5900D209BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ABE07CCA22D74F5900D209BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				ABE07CBE22D74F5700D209BE /* AppDelegate.swift */,
 				ABE07CC022D74F5700D209BE /* SceneDelegate.swift */,
 				ABB215E322DC7D0000424B38 /* TabBar.swift */,
-				ABE07CC222D74F5700D209BE /* ContentView.swift */,
 				AB62172622D870540039BC73 /* Home.swift */,
 				84AB9A762AADA4BF006A5C5A /* OnboardingView.swift */,
 				ABB215DB22DB353800424B38 /* BlurView.swift */,
@@ -341,7 +338,6 @@
 				84BE91FC2A93B52D0024818F /* Type.swift in Sources */,
 				84BE91FF2A93B52D0024818F /* JsonLiteral+.swift in Sources */,
 				3EC4F9E22E1B7C0F00BCE063 /* WebView.swift in Sources */,
-				ABE07CC322D74F5700D209BE /* ContentView.swift in Sources */,
 				84BE92012A93B52D0024818F /* Service.swift in Sources */,
 				ABB215DC22DB353800424B38 /* BlurView.swift in Sources */,
 				84BE92002A93B52D0024818F /* ExtensionJson+.swift in Sources */,
