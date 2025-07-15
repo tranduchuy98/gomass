@@ -65,6 +65,7 @@ struct WebView : UIViewRepresentable {
         webview.uiDelegate = context.coordinator
         webview.navigationDelegate = context.coordinator
         webview.reloadFromOrigin()
+        WebViewModel.share.webview = webview
         return webview
     }
     

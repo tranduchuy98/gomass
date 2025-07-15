@@ -22,7 +22,11 @@ struct CommonWebView: View {
             VStack(spacing: 0) {
                 HStack {
                     Button {
-                        presentationMode.wrappedValue.dismiss()
+                        if WebViewModel.share.webview?.canGoBack ?? false {
+                            WebViewModel.share.webview?.goBack()
+                        } else {
+                            presentationMode.wrappedValue.dismiss()
+                        }
                     } label: {
                         Image(systemName: "chevron.backward")
                             .foregroundColor(Color("Primary"))
