@@ -47,8 +47,20 @@ struct WebView : UIViewRepresentable {
         }
         
         func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-       
         }
+        
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+               if let url = navigationAction.request.url {
+                   if url.scheme == "sms" {
+                       if UIApplication.shared.canOpenURL(url) {
+                           UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                           decisionHandler(.cancel) 
+                           return
+                       }
+                   }
+               }
+               decisionHandler(.allow)
+           }
     }
     
     func makeCoordinator() -> Coordinator {
@@ -64,6 +76,9 @@ struct WebView : UIViewRepresentable {
         let webview = WKWebView(frame: .zero, configuration: config)
         webview.uiDelegate = context.coordinator
         webview.navigationDelegate = context.coordinator
+        if #available(iOS 16.4, *) {
+            webview.isInspectable = true
+        }
         webview.reloadFromOrigin()
         WebViewModel.share.webview = webview
         return webview
