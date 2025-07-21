@@ -187,18 +187,18 @@ enum LanguageSelect: String, CaseIterable {
     }
     
     var homeImage: [String] {
-        let defaultData = KeyManager.shared.dataInit?.vi ?? []
+          let defaultData = (KeyManager.shared.dataInit?.vi ?? []).isEmpty ? [] : KeyManager.shared.dataInit?.vi ?? []
         switch self {
         case .vn:
             return defaultData
         case .en:
-            return KeyManager.shared.dataInit?.en ?? defaultData
+            return ((KeyManager.shared.dataInit?.en ?? []).filter({!$0.isEmpty})).isEmpty ? defaultData : KeyManager.shared.dataInit?.en ?? []
         case .ph:
-            return  KeyManager.shared.dataInit?.ph ?? defaultData
+            return ((KeyManager.shared.dataInit?.ph ?? []).filter({!$0.isEmpty})).isEmpty ? defaultData : KeyManager.shared.dataInit?.ph ?? []
         case .kr:
-            return  KeyManager.shared.dataInit?.ko ?? defaultData
+            return ((KeyManager.shared.dataInit?.ko ?? []).filter({!$0.isEmpty})).isEmpty ? defaultData : KeyManager.shared.dataInit?.ko ?? []
         case .tw:
-            return  KeyManager.shared.dataInit?.tw ?? defaultData
+            return ((KeyManager.shared.dataInit?.tw ?? []).filter({!$0.isEmpty})).isEmpty ? defaultData : KeyManager.shared.dataInit?.tw ?? []
         }
     }
 }
