@@ -63,140 +63,142 @@ struct Home: View {
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     
-                    ForEach(Array(keyManager.language.homeImage.enumerated()), id: \.element) { index, item in
-                        switch index {
-                        case 0:
-                            VStack(spacing: 0) {
-                                Button {
-                                    self.url = keyManager.language.bookingUrl
-                                    self.titleWeb =  keyManager.language.bookingTitle
-                                    WebViewModel.share.isLoad = false
-                                    selection = "CommonWebView"
-                                } label: {
-                                    VStack() {
-                                        KFImage.url(URL(string: item))
-                                            .resizable()
-                                            .placeholder {
-                                                Image("placeholder")
-                                                    .resizable()
-                                            }
-                                            .scaledToFill()
-                                    }
+                    if self.checkSafety(0) {
+                        VStack(spacing: 0) {
+                            Button {
+                                self.url = keyManager.language.bookingUrl
+                                self.titleWeb =  keyManager.language.bookingTitle
+                                WebViewModel.share.isLoad = false
+                                selection = "CommonWebView"
+                            } label: {
+                                VStack() {
+                                    KFImage.url(URL(string: keyManager.language.homeImage[0]))
+                                        .resizable()
+                                        .placeholder {
+                                            Image("placeholder")
+                                                .resizable()
+                                        }
+                                        .scaledToFill()
                                 }
                             }
-                        case 1:
-                            VStack(spacing: 10) {
-                                HStack {
-                                    Text("⭐️ \(keyManager.language.randomEmploy)")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.black)
-                                        .multilineTextAlignment(.leading)
-                                    Spacer()
-                                }
-                                .padding(.horizontal)
-                                .padding(.top, 10)
-                                Button {
-                                    self.url = keyManager.language.bookingUrl
-                                    self.titleWeb =  keyManager.language.bookingTitle
-                                    WebViewModel.share.isLoad = false
-                                    selection = "CommonWebView"
-                                } label: {
-                                    VStack() {
-                                        KFImage.url(URL(string: item))
-                                            .resizable()
-                                            .placeholder {
-                                                Image("placeholder")
-                                                    .resizable()
-                                            }
-                                            .scaledToFill()
-                                            .background(Color.white)
-                                    }
-                                }
-                                AnimatedButton(titleButton: keyManager.language.bookingTitle, onClick: {
-                                    self.url = keyManager.language.bookingUrl
-                                    self.titleWeb =  keyManager.language.bookingTitle
-                                    WebViewModel.share.isLoad = false
-                                    selection = "CommonWebView"
-                                })
-                                .padding(.horizontal)
-                            }
-                        case 2:
-                            VStack(spacing: 10) {
-                                HStack {
-                                    Text("⭐️ \(keyManager.language.designatedEmploy)")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.black)
-                                        .multilineTextAlignment(.leading)
-                                    Spacer()
-                                }
-                                .padding(.horizontal)
-                                .padding(.top, 10)
-                                Button {
-                                    self.url = keyManager.language.techniciansUrl
-                                    self.titleWeb =  keyManager.language.selectBookingTitle
-                                    WebViewModel.share.isLoad = false
-                                    selection = "CommonWebView"
-                                } label: {
-                                    VStack() {
-                                        KFImage.url(URL(string: item))
-                                            .resizable()
-                                            .placeholder {
-                                                Image("placeholder")
-                                                    .resizable()
-                                            }
-                                            .scaledToFill()
-                                            .background(Color.white)
-                                    }
-                                }
-                                
-                                AnimatedButton(titleButton: keyManager.language.selectBookingTitle, onClick: {
-                                    self.url = keyManager.language.techniciansUrl
-                                    self.titleWeb =  keyManager.language.selectBookingTitle
-                                    WebViewModel.share.isLoad = false
-                                    selection = "CommonWebView"
-                                })
-                                .padding(.horizontal)
-                            }
-                        case 3:
-                            VStack(spacing: 10) {
-                                HStack {
-                                    Text("⭐️ \(keyManager.language.registerEmploy)")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.black)
-                                        .multilineTextAlignment(.leading)
-                                    Spacer()
-                                }
-                                .padding(.horizontal)
-                                .padding(.top, 10)
-                                Button {
-                                    self.url = keyManager.language.apllyUrl
-                                    self.titleWeb =  keyManager.language.registerTitle
-                                    WebViewModel.share.isLoad = false
-                                    selection = "CommonWebView"
-                                } label: {
-                                    VStack() {
-                                        KFImage.url(URL(string: item))
-                                            .resizable()
-                                            .placeholder {
-                                                Image("placeholder")
-                                                    .resizable()
-                                            }
-                                            .scaledToFill()
-                                            .background(Color.white)
-                                    }
-                                }
-                                AnimatedButton(titleButton: keyManager.language.registerTitle, onClick: {
-                                    self.url = keyManager.language.apllyUrl
-                                    self.titleWeb =  keyManager.language.registerTitle
-                                    WebViewModel.share.isLoad = false
-                                    selection = "CommonWebView"
-                                })
-                                .padding(.horizontal)
-                            }
-                        default:
-                            VStack{}
                         }
                     }
+                    
+                    if checkSafety(1) {
+                        VStack(spacing: 10) {
+                            HStack {
+                                Text("⭐️ \(keyManager.language.randomEmploy)")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.leading)
+                                Spacer()
+                            }
+                            .padding(.horizontal)
+                            .padding(.top, 10)
+                            Button {
+                                self.url = keyManager.language.bookingUrl
+                                self.titleWeb =  keyManager.language.bookingTitle
+                                WebViewModel.share.isLoad = false
+                                selection = "CommonWebView"
+                            } label: {
+                                VStack() {
+                                    KFImage.url(URL(string: keyManager.language.homeImage[1]))
+                                        .resizable()
+                                        .placeholder {
+                                            Image("placeholder")
+                                                .resizable()
+                                        }
+                                        .scaledToFill()
+                                        .background(Color.white)
+                                }
+                            }
+                            AnimatedButton(titleButton: keyManager.language.bookingTitle, onClick: {
+                                self.url = keyManager.language.bookingUrl
+                                self.titleWeb =  keyManager.language.bookingTitle
+                                WebViewModel.share.isLoad = false
+                                selection = "CommonWebView"
+                            })
+                            .padding(.horizontal)
+                        }
+                    }
+                    
+                    if checkSafety(2) {
+                        VStack(spacing: 10) {
+                            HStack {
+                                Text("⭐️ \(keyManager.language.designatedEmploy)")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.leading)
+                                Spacer()
+                            }
+                            .padding(.horizontal)
+                            .padding(.top, 10)
+                            Button {
+                                self.url = keyManager.language.techniciansUrl
+                                self.titleWeb =  keyManager.language.selectBookingTitle
+                                WebViewModel.share.isLoad = false
+                                selection = "CommonWebView"
+                            } label: {
+                                VStack() {
+                                    KFImage.url(URL(string: keyManager.language.homeImage[2]))
+                                        .resizable()
+                                        .placeholder {
+                                            Image("placeholder")
+                                                .resizable()
+                                        }
+                                        .scaledToFill()
+                                        .background(Color.white)
+                                }
+                            }
+                            
+                            AnimatedButton(titleButton: keyManager.language.selectBookingTitle, onClick: {
+                                self.url = keyManager.language.techniciansUrl
+                                self.titleWeb =  keyManager.language.selectBookingTitle
+                                WebViewModel.share.isLoad = false
+                                selection = "CommonWebView"
+                            })
+                            .padding(.horizontal)
+                        }
+                    }
+                    
+                    if self.checkSafety(3) {
+                        VStack(spacing: 10) {
+                            HStack {
+                                Text("⭐️ \(keyManager.language.registerEmploy)")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.leading)
+                                Spacer()
+                            }
+                            .padding(.horizontal)
+                            .padding(.top, 10)
+                            Button {
+                                self.url = keyManager.language.apllyUrl
+                                self.titleWeb =  keyManager.language.registerTitle
+                                WebViewModel.share.isLoad = false
+                                selection = "CommonWebView"
+                            } label: {
+                                VStack() {
+                                    KFImage.url(URL(string: keyManager.language.homeImage[3]))
+                                        .resizable()
+                                        .placeholder {
+                                            Image("placeholder")
+                                                .resizable()
+                                        }
+                                        .scaledToFill()
+                                        .background(Color.white)
+                                }
+                            }
+                            AnimatedButton(titleButton: keyManager.language.registerTitle, onClick: {
+                                self.url = keyManager.language.apllyUrl
+                                self.titleWeb =  keyManager.language.registerTitle
+                                WebViewModel.share.isLoad = false
+                                selection = "CommonWebView"
+                            })
+                            .padding(.horizontal)
+                        }
+                    }
+                    
                     GridButtonsView(language: keyManager.language, onclick: {
                         self.url = $0.url(keyManager.language.langualeCode)
                         self.titleWeb =  $0.title(keyManager.language)
@@ -219,6 +221,16 @@ struct Home: View {
                 }
             }
         }
+    }
+    
+    private func checkSafety(_ index: Int) -> Bool {
+        if !keyManager.language.homeImage.indices.contains(index) {
+            return false
+        }
+        if keyManager.language.homeImage[index].isEmpty {
+            return false
+        }
+        return true
     }
 }
 
