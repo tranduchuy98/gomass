@@ -8,6 +8,7 @@ class WebViewModel: ObservableObject {
     @Published var webview: WKWebView?
     static let share = WebViewModel()
     var isLoad = false
+    var isBack = false
 }
 
 struct WebView : UIViewRepresentable {
@@ -35,8 +36,12 @@ struct WebView : UIViewRepresentable {
         // Delegate methods go here
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             parent.didFinishHandle?()
+            if webView.canGoBack {
+                   WebViewModel.share.isBack = true
+               } else {
+                   WebViewModel.share.isBack = false
+               }
         }
-
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
             print("didFail navigation")
         }
@@ -76,9 +81,6 @@ struct WebView : UIViewRepresentable {
         let webview = WKWebView(frame: .zero, configuration: config)
         webview.uiDelegate = context.coordinator
         webview.navigationDelegate = context.coordinator
-        if #available(iOS 16.4, *) {
-            webview.isInspectable = true
-        }
         webview.reloadFromOrigin()
         WebViewModel.share.webview = webview
         return webview

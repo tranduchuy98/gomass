@@ -22,7 +22,7 @@ struct CommonWebView: View {
             VStack(spacing: 0) {
                 HStack {
                     Button {
-                        if WebViewModel.share.webview?.canGoBack ?? false {
+                        if WebViewModel.share.isBack {
                             WebViewModel.share.webview?.goBack()
                         } else {
                             presentationMode.wrappedValue.dismiss()

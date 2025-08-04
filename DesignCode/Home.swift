@@ -75,8 +75,12 @@ struct Home: View {
                                     KFImage.url(URL(string: keyManager.language.homeImage[0]))
                                         .resizable()
                                         .placeholder {
-                                            Image("placeholder")
-                                                .resizable()
+                                            ZStack {
+                                                Image("placeholder")
+                                                    .resizable()
+                                                    ProgressView()
+                                                    .tint(Color("Primary"))
+                                            }
                                         }
                                         .scaledToFill()
                                 }
@@ -105,8 +109,12 @@ struct Home: View {
                                     KFImage.url(URL(string: keyManager.language.homeImage[1]))
                                         .resizable()
                                         .placeholder {
-                                            Image("placeholder")
-                                                .resizable()
+                                            ZStack {
+                                                Image("placeholder")
+                                                    .resizable()
+                                                    ProgressView()
+                                                    .tint(Color("Primary"))
+                                            }
                                         }
                                         .scaledToFill()
                                         .background(Color.white)
@@ -143,8 +151,12 @@ struct Home: View {
                                     KFImage.url(URL(string: keyManager.language.homeImage[2]))
                                         .resizable()
                                         .placeholder {
-                                            Image("placeholder")
-                                                .resizable()
+                                            ZStack {
+                                                Image("placeholder")
+                                                    .resizable()
+                                                    ProgressView()
+                                                    .tint(Color("Primary"))
+                                            }
                                         }
                                         .scaledToFill()
                                         .background(Color.white)
@@ -182,8 +194,12 @@ struct Home: View {
                                     KFImage.url(URL(string: keyManager.language.homeImage[3]))
                                         .resizable()
                                         .placeholder {
-                                            Image("placeholder")
-                                                .resizable()
+                                            ZStack {
+                                                Image("placeholder")
+                                                    .resizable()
+                                                    ProgressView()
+                                                    .tint(Color("Primary"))
+                                            }
                                         }
                                         .scaledToFill()
                                         .background(Color.white)
